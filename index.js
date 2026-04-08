@@ -16,8 +16,10 @@ app.get("/test", (req,res) => {
     .send("<h1> Nodejs + SQL  sample</h1>");
 });
 
+//port
+const PORT = process.env.PORT || 8080;
 
 //listen
-app.listen(process.env.PORT, () =>{
+app.listen(PORT, () =>{
     console.log("server Running.".bgMagenta.white);
 });
