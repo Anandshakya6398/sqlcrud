@@ -9,6 +9,7 @@ dotenv.config();
 
 //middleware
 app.use(morgan("dev"));
+app.use(express.json());
 
 //routes
 app.get("/test", (req,res) => {
