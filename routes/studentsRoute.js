@@ -10,4 +10,4 @@ const router = express.Router();
 
 router.get('/getall', getStudents);
 
-module.exports = router;
+module.exports = router
