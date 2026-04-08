@@ -1,8 +1,14 @@
 const express = require('express');
-
+const colors = require ('colors');
 const app = express();
+const dotenv = require("dotenv");
+const morgan = require ("morgan");
+
+//config   dotenv
+dotenv.config();
 
 //middleware
+app.use(morgan("dev"));
 
 //routes
 app.get("/test", (req,res) => {
@@ -10,9 +16,8 @@ app.get("/test", (req,res) => {
     .send("<h1> Nodejs + SQL  sample</h1>");
 });
 
-const PORT = 8080;
 
 //listen
-app.listen(PORT, () =>{
-    console.log("server Running");
+app.listen(process.env.PORT, () =>{
+    console.log("server Running.".bgMagenta.white);
 });
